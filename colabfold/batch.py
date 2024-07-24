@@ -76,8 +76,8 @@ import jax.numpy as jnp
 logging.getLogger('jax._src.lib.xla_bridge').addFilter(lambda _: False)
 
 def patch_openmm():
-    from simtk.openmm import app
-    from simtk.unit import nanometers, sqrt
+    from openmm import app
+    from openmm.unit import nanometers, sqrt
 
     # applied https://raw.githubusercontent.com/deepmind/alphafold/main/docker/openmm.patch
     # to OpenMM 7.5.1 (see PR https://github.com/openmm/openmm/pull/3203)
