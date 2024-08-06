@@ -1010,7 +1010,7 @@ def get_offset_monomer(
     feat['offset_ss'] = np.array(offset_ss)
 
 
-def cpcm(n_aa, c1, c2, flag_nc=1):
+def cpcm(n_aa, c1, c2, flag_nc=0):
     matrix, path = calc_offset_matrix_signal(n_aa, c1, c2, flag_nc)
 #    matrix = mtx_with_signal(matrix, path)
     matrix = mtx_with_upper_negative(matrix)
@@ -1024,7 +1024,7 @@ def mtx_with_upper_negative(matrix):
     return matrix
 
 
-def calc_offset_matrix_signal(n_aa, c1, c2, flag_nc=1):
+def calc_offset_matrix_signal(n_aa, c1, c2, flag_nc=0):
     """
     :param flag_nc:
     :param n_aa: number of amino acid residues
