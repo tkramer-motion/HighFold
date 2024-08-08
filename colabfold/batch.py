@@ -1006,7 +1006,7 @@ def get_offset_monomer(
     for i in range(len(feat['residue_index'])):
         print(disulfide_bond_pairs)
         len_cycpep = len(feat['residue_index'][i])
-        offset_ss.append(cpcm(len_cycpep, c_start, c_end, flag_nc=0 if disulfide_bond_pairs else 1))
+        offset_ss.append(cpcm(len_cycpep, c_start, c_end, flag_nc=0))
     feat['offset_ss'] = np.array(offset_ss)
 
 
